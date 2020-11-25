@@ -1,1 +1,38 @@
-<p>listar works!</p>
+<div class="container">
+    <div class="card">
+        <div class="card-header" style="text-align: center;">
+            <h3>
+                Lista de pasajeros
+            </h3>
+        </div>
+
+        <div class="card-body">
+            <table class="table table-hover" style="text-align: center;">
+                <thead>
+                    <tr>
+                        <th>Identificación</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Dirección</th>
+                        <th>Teléfono</th>
+                        <th>Opciones</th>
+                    </tr>
+                 </thead>
+                <tbody>
+                     <tr *ngFor="let pasajero of pasajeros">
+                         <td>{{pasajero.identificacion}}</td>
+                         <td>{{pasajero.nombre}}</td>
+                         <td>{{pasajero.apellidos}}</td>
+                         <td>{{pasajero.direccion}}</td> 
+                         <td>{{pasajero.telefono}}</td>
+                         <td>
+                             <button>Ver pasajeros</button>
+                         </td>
+
+                    </tr>
+                </tbody>          
+            </table>
+         </div>                   
+     </div>
+</div>
+

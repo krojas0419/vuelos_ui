@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Pasajero } from 'src/app/interfaces/pasajero';
+import { PasajeroService } from 'src/app/services/pasajero/pasajero.service';
+
 @Component({
   selector: 'app-listar',
   templateUrl: './listar.component.html',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarComponent implements OnInit {
 
-  constructor() { }
+  pasajeros: Pasajero[];
+
+  constructor(private service: PasajeroService) { 
+    this.pasajeros=[];
+  }
 
   ngOnInit(): void {
+    this.obtenerListaPasajeros();
   }
+
+  obtenerListaPasajeros(){
+    this.service.listarPasajeros().subscribe(data => {this.pasajeros= data;  
+    });
+}
 
 }
