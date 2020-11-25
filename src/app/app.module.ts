@@ -10,12 +10,16 @@ import { ListarComponent } from './components/pasajero/listar/listar.component';
 import { PasajeroService } from './services/pasajero/pasajero.service';
 
 import { ListarVueloComponent } from './components/vuelo/listar-vuelo/listar-vuelo.component';
+import { CrearComponent } from './components/pasajero/crear/crear.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarComponent,
-    ListarVueloComponent
+    ListarVueloComponent,
+    CrearComponent
+    
   ],
   imports: [
     BrowserModule,

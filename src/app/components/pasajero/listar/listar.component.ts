@@ -23,6 +23,16 @@ export class ListarComponent implements OnInit {
   obtenerListaPasajeros(){
     this.service.listarPasajeros().subscribe(data => {this.pasajeros= data;  
     });
-}
+  }
+
+  eliminarPasajero(pasajero: Pasajero){
+      this.service.borrarPasajero(pasajero)
+      .subscribe(data => {
+        this.pasajeros = this.pasajeros.filter(P => P !== pasajero);
+        alert("El pasajero ha sido eliminado");
+      });
+  }
+
+
 
 }
