@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <td>ID</td>
+        <td>Origen</td>
+        <td>Destino</td>
+        <td>Fecha</td>
+        <td>Hora de salida</td>
+        <td>Hora de llegada</td>
+        <td>precio</td>
+    </tr>
+    <tr *ngFor="let vuelo of vuelos">
+        <td>{{vuelo.idVuelo}}</td>
+        <td>{{vuelo.origen}}</td>
+        <td>{{vuelo.destino}}</td>
+        <td>{{vuelo.fecha}}</td>
+        <td>{{vuelo.horaSalida}}</td>
+        <td>{{vuelo.horaLlegada}}</td>
+        <td>{{vuelo.precio}}</td>
+    </tr>
+</table>
