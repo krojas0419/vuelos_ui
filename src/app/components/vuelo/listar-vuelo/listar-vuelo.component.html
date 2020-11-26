@@ -1,3 +1,4 @@
+<br>
 <div class="container">
     <div class="card">
         <div class="card-header" style="text-align: center;">
@@ -7,7 +8,7 @@
         </div>
 
         <div class="card-body">
-            <table class="table table-hover" style="text-align: center;">
+            <table class="table table-hover">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -30,7 +31,7 @@
                          <td>{{vuelo.horaLlegada}}</td>
                          <td>{{vuelo.precio}}</td>
                          <td>
-                             <button (click)="listarPasajeros()">Ver pasajeros</button>
+                             <button (click)="listarPasajeros()" class="btn btn-primary">Ver pasajeros</button>
                          </td>
 
                     </tr>

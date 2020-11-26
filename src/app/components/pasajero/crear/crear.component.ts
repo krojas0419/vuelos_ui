@@ -10,15 +10,24 @@ import { PasajeroService } from 'src/app/services/pasajero/pasajero.service';
   styleUrls: ['./crear.component.css']
 })
 export class CrearComponent implements OnInit {
-
-  //public pasajero = new Pasajero(); 
-  //Aquí quedé al guardar un pasajero
-
-
+  
+  public pasajero = new Pasajero(); 
+ 
   constructor(private service: PasajeroService, private router: Router) { 
+
   }
 
   ngOnInit(): void {
   }
 
+  crearPasajero(){
+    this.service.crearPasajero(this.pasajero).subscribe( data =>{
+      alert('Se pasajero fue creado satisfactoriamente');
+      this.router.navigate(['listarPasajeros']);
+    });
+  }
+
+  volver(){
+    return this.router.navigate(['listarPasajeros']);
+  }
 }

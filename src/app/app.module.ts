@@ -1,16 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListarComponent } from './components/pasajero/listar/listar.component';
 
-//import { VueloService } from './services/vuelo/vuelo.service'
+
 import { PasajeroService } from './services/pasajero/pasajero.service';
 
 import { ListarVueloComponent } from './components/vuelo/listar-vuelo/listar-vuelo.component';
 import { CrearComponent } from './components/pasajero/crear/crear.component';
+import { EditarComponent } from './components/pasajero/editar/editar.component';
 
 
 @NgModule({
@@ -18,13 +20,15 @@ import { CrearComponent } from './components/pasajero/crear/crear.component';
     AppComponent,
     ListarComponent,
     ListarVueloComponent,
-    CrearComponent
+    CrearComponent,
+    EditarComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     PasajeroService

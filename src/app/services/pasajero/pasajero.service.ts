@@ -18,7 +18,15 @@ export class PasajeroService {
    }
 
    crearPasajero(pasajero: any){
-     return this.http.post<Pasajero>(this.URL + '/consultar', pasajero);
+     return this.http.post<Pasajero>(this.URL + '/crear', pasajero);
+   }
+
+   obtenerIDPasajero(identificacion: number){
+     return this.http.get<Pasajero>(this.URL + '/consultar/'+ identificacion);
+   }
+
+   actualizarPasajero(pasajero: Pasajero){
+    return this.http.put<Pasajero>(this.URL + '/actualizar/', pasajero.identificacion);
    }
 
    borrarPasajero(pasajero: Pasajero){

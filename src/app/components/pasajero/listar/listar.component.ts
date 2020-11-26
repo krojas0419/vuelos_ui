@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Pasajero } from 'src/app/interfaces/pasajero';
 import { PasajeroService } from 'src/app/services/pasajero/pasajero.service';
@@ -11,9 +12,12 @@ import { PasajeroService } from 'src/app/services/pasajero/pasajero.service';
 export class ListarComponent implements OnInit {
 
   pasajeros: Pasajero[];
+  identificacion: number;
+  pasajero: Pasajero = new Pasajero();
 
-  constructor(private service: PasajeroService) { 
+  constructor(private service: PasajeroService, private router: Router) { 
     this.pasajeros=[];
+    this.identificacion=0;
   }
 
   ngOnInit(): void {
@@ -25,6 +29,15 @@ export class ListarComponent implements OnInit {
     });
   }
 
+  crearPasajero(){
+    return this.router.navigate(['crearPasajero']);
+  }
+
+  editarPasajero(pasajero: Pasajero){
+    localStorage.setItem('identificacion', pasajero.identificacion.toString());
+    this.router.navigate(['editarPasajero'])
+  }
+
   eliminarPasajero(pasajero: Pasajero){
       this.service.borrarPasajero(pasajero)
       .subscribe(data => {
@@ -33,6 +46,13 @@ export class ListarComponent implements OnInit {
       });
   }
 
+  buscar(identificacion: number){
+    this.service.obtenerIDPasajero(identificacion).subscribe(data => {
+      localStorage.setItem('identificacion', identificacion.toString());
+      this.router.navigate(['editarPasajero']);
+    } )
+
+  }
 
 
 }

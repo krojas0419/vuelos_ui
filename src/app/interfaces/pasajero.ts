@@ -1,8 +1,8 @@
-export interface Pasajero {
+export class Pasajero {
 
-    identificacion: number;
-    nombre: String;
-    apellidos: String;
-    direccion: String;
-    telefono: String;
+    identificacion: number=0;
+    nombre: String= '';
+    apellidos: String= '';
+    direccion: String= '';
+    telefono: String= '';
 }

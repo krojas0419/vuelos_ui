@@ -8,9 +8,7 @@ import { Vuelo } from 'src/app/interfaces/vuelo';
 })
 export class VueloService {
 
-  constructor(private http: HttpClient) {
-    //console.log("sevice está trabajando")
-   }
+  constructor(private http: HttpClient) {}
 
    URL="http://localhost:8080/consultarVuelos";
 
