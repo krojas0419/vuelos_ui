@@ -15,10 +15,7 @@ export class ListarComponent implements OnInit {
   identificacion: number;
   pasajero: Pasajero = new Pasajero();
 
-  constructor(private service: PasajeroService, private router: Router) { 
-    this.pasajeros=[];
-    this.identificacion=0;
-  }
+  constructor(private service: PasajeroService, private router: Router) { }
 
   ngOnInit(): void {
     this.obtenerListaPasajeros();

@@ -1,6 +1,6 @@
 import { Time } from '@angular/common';
 
-export interface Vuelo {
+export class Vuelo {
     
     idVuelo: number;
     fecha: Date;

@@ -26,7 +26,7 @@ export class PasajeroService {
    }
 
    actualizarPasajero(pasajero: Pasajero){
-    return this.http.put<Pasajero>(this.URL + '/actualizar/', pasajero.identificacion);
+    return this.http.put<Pasajero>(this.URL + '/actualizar/'+ pasajero.identificacion, pasajero);
    }
 
    borrarPasajero(pasajero: Pasajero){
