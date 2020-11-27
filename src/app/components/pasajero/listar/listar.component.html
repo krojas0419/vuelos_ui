@@ -1,12 +1,12 @@
 <hr>
  <div class="container">
      <div style="padding: 10px; float: left; width: 45%; text-align: center;">
-        <th>Agregar un pasajero:</th>
-        <td><button (click)="crearPasajero()" class="btn btn-primary" style="margin-left: 10px;" >Agregar</button></td>
+        <th>{{ "Agregar un pasajero" | translate}} </th>
+        <td><button (click)="crearPasajero()" class="btn btn-primary" style="margin-left: 10px;" > {{"Agregar" | translate}}</button></td>
      </div>
      <div style="padding: 10px; float: right; width: 45%; text-align: center;">
         <input type="text" class="input" name="identificacion" [(ngModel)]="identificacion">
-        <button (click)="buscar(identificacion)" class="btn btn-primary" style="margin-left: 5px;" >Buscar</button>
+        <button (click)="buscar(identificacion)" class="btn btn-primary" style="margin-left: 5px;" >{{"Buscar" | translate}}</button>
     </div>
 </div>
 <hr>
@@ -15,19 +15,19 @@
     <div class="card">
         <div class="card-header" style="text-align: center;">
             <h3>
-                Lista de pasajeros
+                {{"Lista de pasajeros" | translate}}
             </h3>
         </div>
-        <div class="container">
+        <div class="card-body">
             <table class="table table-hover" >
                 <thead>
                     <tr>
-                        <th>Identificación</th>
-                        <th>Nombre</th>
-                        <th>Apellidos</th>
-                        <th>Dirección</th>
-                        <th>Teléfono</th>
-                        <th>Opciones</th>
+                        <th>{{"Identificación" | translate }}</th>
+                        <th>{{"Nombre" | translate}}</th>
+                        <th>{{"Apellidos" | translate}}</th>
+                        <th>{{"Dirección" | translate}}</th>
+                        <th>{{"Teléfono" | translate}}</th>
+                        <th>{{"Opciones" | translate}}</th>
                     </tr>
                  </thead>
                 <tbody>
@@ -38,8 +38,8 @@
                          <td>{{pasajero.direccion}}</td> 
                          <td>{{pasajero.telefono}}</td>
                          <td>
-                             <button (click)="editarPasajero(pasajero)" class="btn btn-warning" style="margin-right: 5px;">Editar</button>
-                             <button (click)="eliminarPasajero(pasajero)" class="btn btn-danger">Eliminar</button>
+                             <button (click)="editarPasajero(pasajero)" class="btn btn-warning" style="margin-right: 5px;">{{"Editar" | translate}}</button>
+                             <button (click)="eliminarPasajero(pasajero)" class="btn btn-danger">{{"Eliminar" | translate}}</button>
                          </td>
                     </tr>
                 </tbody>          

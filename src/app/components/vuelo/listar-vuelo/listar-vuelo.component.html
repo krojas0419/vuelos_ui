@@ -3,7 +3,7 @@
     <div class="card">
         <div class="card-header" style="text-align: center;">
             <h3>
-                Lista de vuelos
+                {{"Lista de vuelos" | translate}}
             </h3>
         </div>
 
@@ -12,13 +12,13 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Origen</th>
-                        <th>Destino</th>
-                        <th>Fecha</th>
-                        <th>Hora de salida</th>
-                        <th>Hora de llegada</th>
-                        <th>Precio</th>
-                        <th>Opciones</th>
+                        <th>{{"Origen" | translate}}</th>
+                        <th>{{"Destino" | translate}}</th>
+                        <th>{{"Fecha" | translate}}</th>
+                        <th>{{"Hora de salida" | translate}}</th>
+                        <th>{{"Hora de llegada" | translate}}</th>
+                        <th>{{"Precio" | translate}}</th>
+                        <th>{{"Opciones" | translate}}</th>
                     </tr>
                  </thead>
                 <tbody>
@@ -31,7 +31,7 @@
                          <td>{{vuelo.horaLlegada}}</td>
                          <td>{{vuelo.precio}}</td>
                          <td>
-                             <button (click)="listarPasajeros()" class="btn btn-primary">Ver pasajeros</button>
+                             <button (click)="listarPasajeros()" class="btn btn-primary">{{"Ver pasajeros" | translate}}</button>
                          </td>
 
                     </tr>

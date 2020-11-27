@@ -22,7 +22,7 @@ export class CrearComponent implements OnInit {
 
   crearPasajero(){
     this.service.crearPasajero(this.pasajero).subscribe( data =>{
-      alert('Se pasajero fue creado satisfactoriamente');
+      alert('Se agregó el pasajero satisfactoriamente');
       this.router.navigate(['listarPasajeros']);
     });
   }

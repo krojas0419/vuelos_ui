@@ -1,8 +1,10 @@
 <div style="text-align: center;">
     <h1>
-        AEROLINEA
+        {{ "AEROLINEA" | translate}}
     </h1>
-    <button (click)="listar()">Listar vuelos</button>
+    <button (click)="listar()">{{"Listar vuelos" | translate}}</button>
+    <button (click)="cambiarIdioma('es')" class="btn btn-link" style="margin-left: 30px;"> {{"Español" | translate}} </button>
+    <button (click)="cambiarIdioma('en')" class="btn btn-link">{{"Inglés" | translate}}</button>
 </div>
 
 
