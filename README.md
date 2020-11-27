@@ -1,27 +1,14 @@
-# VuelosUI
+## Contenido de la semana 4 del semillero (Angular).
+Construir una UI que tenga una pantalla donde se visualice la lista de los
+vuelos y al seleccionar un vuelo nos lleve a una pantalla con un formulario
+con la información de los pasajeros, en este formulario se tendrán dos
+secciones una con los datos del pasajero y otra con la lista de ellos; en esta
+pantalla se podrá crear, actualizar, eliminar, consultar todos los pasajeros e ir
+a la pantalla de vuelos, adicionalmente al ingresar la identificación de alguien
+el sistema debe buscar si ya existe y cargar su información para actualizar
+bloqueando el campo identificación.
+* El formulario debe estar internacionalizado en dos idiomas.
+* La navegación entre pantallas debe ser manejada por medio de rutas.
+* La información de vuelos y la gestión de pasajeros se debe realizar llamando
+al API de la sección anterior.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
